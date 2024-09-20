@@ -1,6 +1,7 @@
 # Drowsiness Detection System
 
-This project implements a **Drowsiness Detection System** using computer vision techniques to detect early signs of drowsiness. The system leverages **MediaPipe** for facial landmark detection and a custom-trained machine learning model to monitor eye movement and facial expressions, specifically focusing on eye closure.
+This project implements a **Drowsiness Detection System** using computer vision techniques to detect early signs of drowsiness. The system leverages **MediaPipe** for facial landmark detection and a custom-trained deep learning model to monitor eye movement and facial expressions, specifically focusing on eye closure.
+Particularly useful while driving vehicles.
 
 ## Project Overview
 
@@ -22,12 +23,12 @@ Below is an image of the architecture used in the trained model for drowsiness d
 
 ## How It Works
 
-1. **Eye Aspect Ratio (EAR) Calculation**: 
-   - The system calculates EAR using MediaPipe's facial landmarks, specifically focusing on the eye region.
-   - It tracks the EAR in real-time to determine whether the eyes are closed for an extended period.
+1. **Eye Coordinates Calculation**: 
+   - The system calculates these using MediaPipe's facial landmarks, specifically focusing on the eye region.
+   - It tracks the eyes in real-time to determine whether the eyes are closed for an extended period.
 
 2. **Drowsiness Detection**:
-   - If the EAR falls below a threshold for a set duration, the system detects drowsiness and triggers an alert (sound or visual).
+   - If the model detects eyes closed for a set duration, the system detects drowsiness and triggers an alert (sound or visual).
 
 ## Setup Instructions
 
